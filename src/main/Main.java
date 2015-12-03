@@ -9,7 +9,15 @@ public class Main
 	
 	public static void main(String[] args)
 	{
-		test1202();
+		test1205();
+	}
+	
+	public static void test1205()
+	{
+		packageName = "setframework";
+		test("JList");
+		test("JSet");
+		test("JMap");
 	}
 	
 	public static void test1202()
@@ -20,12 +28,6 @@ public class Main
 		test("JStringBuilder");
 		test("JStringBuffer");
 		test("JToolClass");
-	}
-	
-	public static void test1205()
-	{
-		packageName = "setframework";
-		test("");
 	}
 	
 	private static void test(String className)
