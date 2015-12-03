@@ -1,4 +1,4 @@
-package main;
+package commonclass;
 
 public class JStringBuilder
 {

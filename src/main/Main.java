@@ -5,13 +5,16 @@ import java.lang.reflect.Method;
 
 public class Main
 {
+	private static String packageName = "";
+	
 	public static void main(String[] args)
 	{
-		test1203();
+		test1202();
 	}
 	
-	private static void test1203()
+	public static void test1202()
 	{
+		packageName = "commonclass";
 		test("JEquals");
 		test("JString");
 		test("JStringBuilder");
@@ -19,11 +22,17 @@ public class Main
 		test("JToolClass");
 	}
 	
+	public static void test1205()
+	{
+		packageName = "setframework";
+		test("");
+	}
+	
 	private static void test(String className)
 	{
 		try
 		{
-			Class <?> c = Class.forName("main." + className);
+			Class <?> c = Class.forName(packageName + "." + className);
 			
 			Field f = c.getField("NickName");
 			System.out.println(">> " + f.get(null));
