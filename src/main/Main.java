@@ -9,18 +9,28 @@ public class Main
 	
 	public static void main(String[] args)
 	{
-		test1205();
+		test1211();
+	}
+	
+	public static void test1211()
+	{
+		packageName = "iofile";
+		//test("JFile");
+		//test("JDirTree");
+		//test("JRandomAccessFile");
+		//test("JFileIO");
+		//test("JDataIO");
+		//test("JBufferedIO");
+		//test("JCharIO");
+		//test("JLineRW");
+		//test("JSerialize");
+		
+		packageName = "xml";
+		//test("JDom");
+		test("JSax");
 	}
 	
 	public static void test1205()
-	{
-		packageName = "setframework";
-		test("JList");
-		test("JSet");
-		test("JMap");
-	}
-	
-	public static void test1202()
 	{
 		packageName = "commonclass";
 		test("JEquals");
@@ -28,6 +38,11 @@ public class Main
 		test("JStringBuilder");
 		test("JStringBuffer");
 		test("JToolClass");
+		
+		packageName = "setframework";
+		test("JList");
+		test("JSet");
+		test("JMap");
 	}
 	
 	private static void test(String className)

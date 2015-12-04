@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<store>
+	<tools>
+		<pen id="1001">
+			<name>铅笔</name>
+			<price>$0.99</price>
+			<description><t>干扰</t>2B OR NOT 2B</description>
+		</pen>
+		<pen id="1002">
+			<name>钢笔</name>
+			<price>%5.00</price>
+		</pen>
+	</tools>
+</store>
