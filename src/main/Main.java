@@ -15,19 +15,22 @@ public class Main
 	public static void test1211()
 	{
 		packageName = "iofile";
-		//test("JFile");
-		//test("JDirTree");
-		//test("JRandomAccessFile");
-		//test("JFileIO");
-		//test("JDataIO");
-		//test("JBufferedIO");
-		//test("JCharIO");
-		//test("JLineRW");
-		//test("JSerialize");
+		test("JFile");
+		test("JDirTree");
+		test("JRandomAccessFile");
+		test("JFileIO");
+		test("JDataIO");
+		test("JBufferedIO");
+		test("JCharIO");
+		test("JLineRW");
+		test("JSerialize");
 		
 		packageName = "xml";
-		//test("JDom");
+		test("JDom");
 		test("JSax");
+		test("Jjdom");
+		test("Jdom4j");
+		test("JDomW");
 	}
 	
 	public static void test1205()
