@@ -4,5 +4,13 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="lib" path="lib/jdom-2.0.6.jar"/>
 	<classpathentry kind="lib" path="lib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="lib/tomcat/ecj-4.5.jar"/>
+	<classpathentry kind="lib" path="lib/tomcat/tomcat-dbcp.jar"/>
+	<classpathentry kind="lib" path="lib/tomcat/tomcat-embed-core.jar"/>
+	<classpathentry kind="lib" path="lib/tomcat/tomcat-embed-el.jar"/>
+	<classpathentry kind="lib" path="lib/tomcat/tomcat-embed-jasper.jar"/>
+	<classpathentry kind="lib" path="lib/tomcat/tomcat-embed-logging-juli.jar"/>
+	<classpathentry kind="lib" path="lib/tomcat/tomcat-embed-logging-log4j.jar"/>
+	<classpathentry kind="lib" path="lib/tomcat/tomcat-embed-websocket.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
