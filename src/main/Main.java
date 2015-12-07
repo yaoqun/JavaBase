@@ -1,5 +1,6 @@
 package main;
 
+import java.io.File;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
@@ -11,7 +12,7 @@ public class Main
 	
 	public static void main(String[] args)
 	{
-		testTomcat(null);
+		testTomcat("web/1.0");
 	}
 	
 	public static void test1211()
@@ -71,13 +72,17 @@ public class Main
 	
 	private static void testTomcat(String appPath)
 	{
-		if (appPath == null)
+		if (appPath != null)
+			appPath = new File("").getAbsolutePath() + "/" + appPath;
+		else
 			appPath = "D:/apache-tomcat-9/webapps/examples";
 		
 		try
 		{
 			Tomcat tomcat = new Tomcat();
 			tomcat.addWebapp("/", appPath);
+			
+			tomcat.getConnector().setURIEncoding("utf-8");
 			
 			tomcat.start();
 			System.out.println("tomcat started");
