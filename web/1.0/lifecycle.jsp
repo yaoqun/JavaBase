@@ -6,8 +6,8 @@
 	<title>whweb</title>
 </head>
 <body>
-	<!-- html内容 -->
 	<h3>JSP页面生命周期</h3>
+	<hr>
 	
 	<%!
 	private int m_initCnt = 0;

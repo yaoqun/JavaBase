@@ -7,17 +7,18 @@
 </head>
 <body>
 	<!-- html内容 -->
-	<h3>hello 页面</h3>
+	<h3>hello JSP页面</h3>
+	<hr>
 	
 	<%-- jsp声明 --%>
 	<%!
-	int a = 1, b = 2;
+	private int a = 1, b = 2;
 
-	int add(int a, int b) {
+	private int add(int a, int b) {
 		return a+b;
 	}
 
-	float mean(int a, int b) {
+	private float mean(int a, int b) {
 		return ( (float)a + b ) / 2;
 	}
 	%>
