@@ -6,13 +6,18 @@ import java.lang.reflect.Method;
 
 import org.apache.catalina.startup.Tomcat;
 
+import mysql.DbHelper;
+
 public class Main
 {
 	private static String packageName = "";
 	
-	public static void main(String[] args)
+	public static void main(String[] args) throws Exception
 	{
-		testTomcat("web/1.0");
+		if ( DbHelper.getInstance().isInitOk() )
+		{
+			testTomcat("web/2.0");
+		}
 	}
 	
 	public static void test1211()
@@ -70,7 +75,7 @@ public class Main
 		}
 	}
 	
-	private static void testTomcat(String appPath)
+	public static void testTomcat(String appPath)
 	{
 		if (appPath != null)
 			appPath = new File("").getAbsolutePath() + "/" + appPath;
