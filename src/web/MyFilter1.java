@@ -9,46 +9,28 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
-public class MyFilter implements Filter
+public class MyFilter1 implements Filter
 {
 	@Override
 	public void init(FilterConfig conf) throws ServletException
 	{
-		System.out.println("MyFilter init");
+		System.out.println(">> MyFilter-1 init");
 	}
 	
 	@Override
 	public void doFilter(ServletRequest req, ServletResponse rsp, FilterChain chain)
 			throws IOException, ServletException
 	{
-		System.out.println("MyFilter doFilter");
+		System.out.println(">> MyFilter-1 doFilter start");
+		
+		chain.doFilter(req, rsp);
+		
+		System.out.println(">> MyFilter-1 doFilter end");
 	}
 	
 	@Override
 	public void destroy()
 	{
-		System.out.println("MyFilter destory");
+		System.out.println(">> MyFilter-1 destory");
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

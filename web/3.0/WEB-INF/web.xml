@@ -7,13 +7,36 @@
   metadata-complete="true">
 
 <filter>
-  <filter-name>MyFilter</filter-name>
-  <filter-class>web.MyFilter</filter-class>
+  <filter-name>MyFilter-1</filter-name>
+  <filter-class>web.MyFilter1</filter-class>
 </filter>
-
 <filter-mapping>
-	<filter-name>MyFilter</filter-name>
-	<url-pattern>/*</url-pattern>
+	<filter-name>MyFilter-1</filter-name>
+	<url-pattern>/index.jsp</url-pattern>
+	<dispatcher>REQUEST</dispatcher>
+</filter-mapping>
+
+<filter>
+  <filter-name>MyFilter-2</filter-name>
+  <filter-class>web.MyFilter2</filter-class>
+</filter>
+<filter-mapping>
+	<filter-name>MyFilter-2</filter-name>
+	<url-pattern>/index.jsp</url-pattern>
+</filter-mapping>
+<filter-mapping>
+	<filter-name>MyFilter-2</filter-name>
+	<url-pattern>/filter_forward.jsp</url-pattern>
+</filter-mapping>
+
+<filter>
+  <filter-name>MyFilter-3</filter-name>
+  <filter-class>web.MyFilter3</filter-class>
+</filter>
+<filter-mapping>
+	<filter-name>MyFilter-3</filter-name>
+	<url-pattern>/filter_doforward.jsp</url-pattern>
+	<dispatcher>FORWARD</dispatcher>
 </filter-mapping>
 
 </web-app>
