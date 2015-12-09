@@ -39,4 +39,55 @@
 	<dispatcher>FORWARD</dispatcher>
 </filter-mapping>
 
+<filter>
+  <filter-name>FilterParam</filter-name>
+  <filter-class>web.FilterParam</filter-class>
+  <init-param>
+    <param-name>admin</param-name>
+    <param-value>张三</param-value>
+  </init-param>
+</filter>
+<filter-mapping>
+	<filter-name>FilterParam</filter-name>
+	<url-pattern>/filter_config.jsp</url-pattern>
+</filter-mapping>
+
+<filter>
+  <filter-name>Error404</filter-name>
+  <filter-class>web.Error404Filter</filter-class>
+</filter>
+<filter-mapping>
+	<filter-name>Error404</filter-name>
+	<url-pattern>/404.jsp</url-pattern>
+	<dispatcher>ERROR</dispatcher>
+</filter-mapping>
+
+<error-page>
+  <error-code>404</error-code>
+  <location>/404.jsp</location>
+</error-page>
+
+<servlet>
+  <servlet-name>AsyncServlet</servlet-name>
+  <servlet-class>web.AsyncServlet</servlet-class>
+  <async-supported>true</async-supported>
+</servlet>
+<servlet-mapping>
+  <servlet-name>AsyncServlet</servlet-name>
+  <url-pattern>/async</url-pattern>
+</servlet-mapping>
+
+<servlet>
+  <servlet-name>ServletDemo</servlet-name>
+  <servlet-class>web.ServletDemo</servlet-class>
+  <init-param>
+    <param-name>admin</param-name>
+    <param-value>张三</param-value>
+  </init-param>
+</servlet>
+<servlet-mapping>
+  <servlet-name>ServletDemo</servlet-name>
+  <url-pattern>/servlet_demo</url-pattern>
+</servlet-mapping>
+
 </web-app>
