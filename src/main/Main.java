@@ -14,6 +14,18 @@ public class Main
 	
 	public static void main(String[] args) throws Exception
 	{
+		test1231();
+	}
+	
+	public static void test1231()
+	{
+		testTomcat("web/3.0");
+	}
+	
+	public static void test1226()
+	{
+		// testTomcat("web/1.0");
+		
 		if ( DbHelper.getInstance().isInitOk() )
 		{
 			testTomcat("web/2.0");

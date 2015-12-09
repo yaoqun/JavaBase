@@ -2,10 +2,21 @@ package bookstore;
 
 public class Book
 {
+	private int bookid;
 	private String bookname;
 	private String author;
 	private String publisher;
 	private float price;
+	
+	public void setBookid(int id)
+	{
+		this.bookid = id;
+	}
+	
+	public int getBookid()
+	{
+		return this.bookid;
+	}
 	
 	public void setBookname(String name)
 	{

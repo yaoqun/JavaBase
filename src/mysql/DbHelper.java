@@ -47,8 +47,6 @@ public class DbHelper
 	
 	public List<String> getAllBookNames()
 	{
-		List<String> books = new ArrayList<String>();
-		
 		Statement stmt = null;
 		ResultSet rs = null;
 		
@@ -56,16 +54,16 @@ public class DbHelper
 		{
 			stmt = m_conn.createStatement();
 			rs = stmt.executeQuery("select bookname from books");
+			
+			List<String> books = new ArrayList<String>();
 			while (rs.next())
-			{
 				books.add(rs.getString("bookname"));
-			}
 			return books;
 		}
 		catch (Exception e)
 		{
 			e.printStackTrace();
-			return books;
+			return null;
 		}
 		finally
 		{
@@ -84,8 +82,6 @@ public class DbHelper
 	
 	public Book getBook(String bookname)
 	{
-		Book book = new Book();
-		
 		Statement stmt = null;
 		ResultSet rs = null;
 		
@@ -96,19 +92,24 @@ public class DbHelper
 				bookname);
 			stmt = m_conn.createStatement();
 			rs = stmt.executeQuery(sql);
+			
 			if (rs.next())
 			{
-				book.setBookname(rs.getString("bookname"));
-				book.setAuthor(rs.getString("author"));
-				book.setPublisher(rs.getString("publisher"));
-				book.setPrice(rs.getFloat("price"));
+				Book b = new Book();
+				b.setBookid(rs.getInt("bookid"));
+				b.setBookname(rs.getString("bookname"));
+				b.setAuthor(rs.getString("author"));
+				b.setPublisher(rs.getString("publisher"));
+				b.setPrice(rs.getFloat("price"));
+				return b;
 			}
-			return book;
+			else
+				return null;
 		}
 		catch (Exception e)
 		{
 			e.printStackTrace();
-			return book;
+			return null;
 		}
 		finally
 		{
@@ -133,7 +134,7 @@ public class DbHelper
 		catch (Exception e) { }
 		
 		stmt.execute("create table books(" +
-				"id int unsigned auto_increment not null primary key," +
+				"bookid int unsigned auto_increment not null primary key," +
 				"bookname varchar(40) not null unique key," +
 				"author varchar(40)," +
 				"publisher varchar(40)," +
