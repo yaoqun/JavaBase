@@ -14,7 +14,13 @@ public class Main
 	
 	public static void main(String[] args) throws Exception
 	{
-		test1231();
+		test0109();
+	}
+	
+	public static void test0109()
+	{
+		packageName = "reflect";
+		test("JReflect");
 	}
 	
 	public static void test1231()
