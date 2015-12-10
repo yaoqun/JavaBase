@@ -19,7 +19,8 @@ public class Main
 	
 	public static void test1231()
 	{
-		testTomcat("web/3.0");
+		// testTomcat("web/3.0");
+		testTomcat("web/4.0");
 	}
 	
 	public static void test1226()

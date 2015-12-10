@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+  version="4.0"
+  metadata-complete="true">
+
+<listener>
+  <listener-class>web.ServletCtxListener</listener-class>
+</listener>
+<listener>
+  <listener-class>web.HttpSessListener</listener-class>
+</listener>
+<listener>
+  <listener-class>web.ServletReqListener</listener-class>
+</listener>
+<listener>
+  <listener-class>web.ServletReqAttrListener</listener-class>
+</listener>
+
+<context-param>
+  <param-name>servlet-ctx-param</param-name>
+  <param-value>监听器</param-value>
+</context-param>
+
+<session-config>
+  <session-timeout>1</session-timeout>  <!-- 1分钟 -->
+</session-config>
+
+</web-app>
