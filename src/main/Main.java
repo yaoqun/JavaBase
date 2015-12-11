@@ -20,7 +20,11 @@ public class Main
 	public static void test0109()
 	{
 		packageName = "reflect";
-		test("JReflect");
+		//test("JReflect");
+		
+		packageName = "annotation";
+		//test("JUseAnno");
+		test("JQuery");
 	}
 	
 	public static void test1231()
