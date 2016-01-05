@@ -6,6 +6,7 @@ import java.lang.reflect.Method;
 
 import org.apache.catalina.startup.Tomcat;
 
+import homework.TestValidCodeLineNumber;
 import mysql.DbHelper;
 
 public class Main
@@ -14,7 +15,18 @@ public class Main
 	
 	public static void main(String[] args) throws Exception
 	{
-		test0109();
+		//test0116();
+		homework();
+	}
+	
+	public static void homework()
+	{
+		TestValidCodeLineNumber.Test();
+	}
+	
+	public static void test0116()
+	{
+		
 	}
 	
 	public static void test0109()
