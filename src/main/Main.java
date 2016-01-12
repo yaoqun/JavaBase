@@ -15,18 +15,12 @@ public class Main
 	
 	public static void main(String[] args) throws Exception
 	{
-		//test0116();
-		homework();
+		//homework0104();
 	}
 	
-	public static void homework()
+	public static void homework0104()
 	{
 		TestValidCodeLineNumber.Test();
-	}
-	
-	public static void test0116()
-	{
-		
 	}
 	
 	public static void test0109()
