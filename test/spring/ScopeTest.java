@@ -28,7 +28,8 @@ public class ScopeTest extends SpringUnitTest {
 		
 		PlainUser u2 = super.getBean("plainUser");
 		
-		assertFalse(u1.hashCode() != u2.hashCode());
+		System.out.println("hashCode不同: " + u1.hashCode() + ", " + u2.hashCode());
+		assertFalse(u1.hashCode() == u2.hashCode());
 	}
 
 }

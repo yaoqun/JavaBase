@@ -4,8 +4,6 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd" >
 
-  <bean id="singletonUser" scope="singleton" class="spring.SingletonUser"></bean>
-
-  <bean id="plainUser" scope="prototype" class="spring.PlainUser"></bean>
+  <bean id="myResource" class="spring.MyResource"></bean>
 
 </beans>
