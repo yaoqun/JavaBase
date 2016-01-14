@@ -4,7 +4,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
-@Component()
+@Component("baseUser")
 @Scope("prototype")
 @Order(value=2)
 public class UserAnnotation {
