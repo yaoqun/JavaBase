@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd  
+        http://www.springframework.org/schema/aop 
+        http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
+
+  <!-- 切面类 -->
+  <bean id="myAspect" class="spring.MyAspect"></bean>
+  <!-- 业务类 -->
+  <bean id="myBussiness" class="spring.MyBussiness"></bean>
+
+  <aop:config>
+    <aop:aspect id="aspect" ref="myAspect">
+      <aop:pointcut id="bussiness"
+        expression="execution(* spring.MyBussiness*.*(..))"/>
+      <aop:before pointcut-ref="bussiness" method="before"/>
+      <aop:after-returning pointcut-ref="bussiness" method="afterReturning"/>
+      <aop:after pointcut-ref="bussiness" method="after"/>
+      <aop:around pointcut-ref="bussiness" method="around"/>
+      <aop:around pointcut="execution(* spring.MyBussiness.set(String,int)) and args(name,age)"
+        method="aroundWithArgs"/>
+    </aop:aspect>
+  </aop:config>
+
+</beans>
