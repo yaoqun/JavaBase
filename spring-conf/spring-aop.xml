@@ -13,16 +13,25 @@
   <bean id="myBussiness" class="spring.MyBussiness"></bean>
 
   <aop:config>
-    <aop:aspect id="aspect" ref="myAspect">
-      <aop:pointcut id="bussiness"
+    
+    <aop:pointcut id="bussiness"
         expression="execution(* spring.MyBussiness*.*(..))"/>
+    
+    <aop:aspect id="aspect" ref="myAspect">
+    
       <aop:before pointcut-ref="bussiness" method="before"/>
       <aop:after-returning pointcut-ref="bussiness" method="afterReturning"/>
       <aop:after pointcut-ref="bussiness" method="after"/>
       <aop:around pointcut-ref="bussiness" method="around"/>
       <aop:around pointcut="execution(* spring.MyBussiness.set(String,int)) and args(name,age)"
         method="aroundWithArgs"/>
+      
+      <aop:declare-parents types-matching="spring.MyBussiness"
+        implement-interface="spring.Track"
+        default-impl="spring.TrackImpl"/>
+      
     </aop:aspect>
+    
   </aop:config>
 
 </beans>

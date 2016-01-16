@@ -12,10 +12,16 @@ public class MyAspectTest extends SpringUnitTest {
 	}
 	
 	@Test
-	public void test() {
+	public void testAdviser() {
 		MyBussiness buss = super.getBean("myBussiness");
 		buss.bussiness();
 		buss.set("whiker", 20);
+	}
+	
+	@Test
+	public void testIntroductions() {
+		Track track = super.getBean("myBussiness");
+		track.track();
 	}
 
 }
